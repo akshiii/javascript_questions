@@ -100,6 +100,6 @@ const obj4 = {
 obj4.x();
 
 /* 
-9. this inside arrow function
-Arrow fu does not have their own this, they take the value of their enclosing lexical context
+9. this inside DOM
+We can write this keyword inside html also.
 */
