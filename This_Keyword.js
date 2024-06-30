@@ -56,8 +56,9 @@ obj.x(); // Value of this is obj
 */
 /**
 If we have another object obj1 who as has a property a: 20, now we have a way to share the x Method with both objects. 
-We can do that using call,apply,bind
+We can do that using call,apply & bind
 */
 const obj1 = {
   a: 20,
 };
+obj.x.call(obj1); // now this keyword inside the Method x of object "obj" will point to the "this" of "obj2"
