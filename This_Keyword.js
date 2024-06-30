@@ -79,14 +79,27 @@ obj3.x(); // global object
 
 /* 
 8. this inside NESTED arrow function
-Arrow fu does not have their own this, they take the value of their enclosing lexical context
+const y = () => {
+      console.log(this);
+    };
+This above arrow function will behave as if it was not there and only console.log(this) was replaced by it, 
+as arrow functions dont provide their own "this" binding.
+For Method y, the enclosing lexical context is Method x, and in x, the "this" point to obj4, thats why "this" inside y will also point to obj4
 */
 
 const obj4 = {
   a: 30,
-  x: () => {
-    console.log(this); //Value of this here is obj
+  x: function () {
+    const y = () => {
+      console.log(this); // Here this points to obj4
+    };
+    y();
   },
 };
 
-obj4.x(); // global object
+obj4.x();
+
+/* 
+9. this inside arrow function
+Arrow fu does not have their own this, they take the value of their enclosing lexical context
+*/
