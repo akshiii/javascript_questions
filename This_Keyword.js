@@ -102,4 +102,7 @@ obj4.x();
 /* 
 9. this inside DOM
 We can write this keyword inside html also.
+<button onclick="alert(this)">Check value of this keyword</button>
+This will print [object HTMLButtonElement]
+"this" is the reference to the HTML button element, or which ever element we check this for
 */
