@@ -62,3 +62,31 @@ const obj1 = {
   a: 20,
 };
 obj.x.call(obj1); // now this keyword inside the Method x of object "obj" will point to the "this" of "obj2"
+
+/* 
+7. this inside arrow function
+Arrow fu does not have their own this, they take the value of their enclosing lexical context
+*/
+
+const obj3 = {
+  a: 30,
+  x: () => {
+    console.log(this); //Value of this here is obj
+  },
+};
+
+obj3.x(); // global object
+
+/* 
+8. this inside NESTED arrow function
+Arrow fu does not have their own this, they take the value of their enclosing lexical context
+*/
+
+const obj4 = {
+  a: 30,
+  x: () => {
+    console.log(this); //Value of this here is obj
+  },
+};
+
+obj4.x(); // global object
