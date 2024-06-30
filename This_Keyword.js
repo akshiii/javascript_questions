@@ -106,3 +106,7 @@ We can write this keyword inside html also.
 This will print [object HTMLButtonElement]
 "this" is the reference to the HTML button element, or which ever element we check this for
 */
+
+/**
+10. this is Classes
+*/
