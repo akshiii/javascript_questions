@@ -1,0 +1,54 @@
+.outer-container {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: bisque;
+  padding: 20px;
+}
+
+.upper-container {
+  height: 450px;
+  display: flex;
+  flex-direction: row;
+  /* background-color: white; */
+}
+
+.lower-container {
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+  margin-top: 20px;
+}
+
+.left-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+  padding: 0 20px 0 20px;
+}
+
+.right-container {
+  width: 20px;
+  display: flex;
+  background-color: pink;
+  margin-left: 20px;
+}
+.title {
+  height: 40px;
+  background-color: pink;
+  margin-bottom: 10px;
+}
+.text-content {
+  height: 100%;
+  background-color: pink;
+  margin-bottom: 10px;
+}
+.button {
+  height: 40px;
+  width: 40px;
+  background-color: pink;
+  align-self: flex-end;
+}
