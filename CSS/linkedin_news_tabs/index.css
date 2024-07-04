@@ -1,0 +1,23 @@
+.pymk-container {
+  display: flex;
+  flex-direction: "column";
+  width: "300px";
+  height: "400px";
+}
+
+.pymk-title {
+  display: flex;
+  width: "20px";
+  color: "lightgrey";
+}
+
+.pymk-userlist {
+  height: 100%;
+}
+.user-card {
+  display: "flex";
+}
+.user-card > img {
+  width: "10px";
+  height: "10px";
+}
