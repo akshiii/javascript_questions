@@ -1,24 +1,24 @@
 //Unsolved~~~
 let relationObj = {};
 function printRelationObject(list){
-	list.forEach(listItem => {
-		console.log(listItem[0], listItem[1]);
+	for([child , parent] of list){
+		console.log(child, parent);
 
-		if(relationObj[listItem[0]]){
-			let newChild = relationObj[listItem[0]];
-			delete relationObj[listItem[0]];
-			relationObj[listItem[1]] = {[listItem[0]]: newChild};
+		if(relationObj[child]){
+			let newChild = relationObj[child];
+			delete relationObj[child];
+			relationObj[parent] = {[child]: newChild};
 		}
-		else if(relationObj[listItem[1]]){
-			let innerObj = relationObj[listItem[1]];
-			innerObj[listItem[0]] = {};
+		else if(relationObj[parent]){
+			let innerObj = relationObj[parent];
+			innerObj[child] = {};
 		}
 		else{
 			printRelationObject()
-			relationObj[listItem[1]] = {[listItem[0]] : {}};
+			relationObj[parent] = {[child] : {}};
 		}
 
-	});
+	};
 }
 
 
