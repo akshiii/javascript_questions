@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+.like_comp{
+	border: 5px solid var(--like-bg, grey);
+    width: 353px;
+    border-radius: 4%;
+	display: flex;
+	height: 200px;
+}
+.like_text{
+	color: var(--like-bg, var(--like-bg, grey));
+    margin-left: 50px;
+    font-size: 80px;
+    margin-top: 41px;
+    margin-right: 10px;
+}
+
+.heart {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: var(--like-bg, grey);
+    transform: rotate(-45deg);
+	margin-left: 50px;
+	margin-top: 50px;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: var(--like-bg, grey);
+    border-radius: 50%;
+}
+
+.heart::before,
+.heart::after :hover{
+	background-color: 'red';
+}
+
+.heart::before {
+    top: -50px;
+    left: 0;
+}
+
+.heart::after {
+    left: 50px;
+    top: 2px;
+}
