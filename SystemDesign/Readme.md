@@ -1,5 +1,6 @@
 ## Frontend System Design
 
+- Refernce - https://www.youtube.com/watch?v=NEzu4FD25KM
 - Youtube - Frontend Engineer and JSer
 - You are given a piece of UI, design the Components for it. its accessibility, its performance, component hierarchy, props hierarchy, data passing, what states are we storing.
 
@@ -61,10 +62,65 @@
 
 ## API Model
 
-- What HTTP protocol to use and why.
+- What HTTP protocol to use and why. Spend 10% time here.
 
 ![alt text](http1Vshttp2.png)
 
-- Api Options
+### Api Options
+
+- Polling or Long/Short or RestApi is simple, industry standard, its esay to load balance, its HTTP2 compatible, but the cons is Longer latency, we send request headers, body and then we wait for backend to parse that data, authenticate user and then return back to client as response, thats why high latency is there.
 
 ![alt text](polling.png)
+
+- GraphQL - Pros is that its very modern, easy to load balance, and mainly that it loads only the data that we need.
+
+![alt text](graphql.png)
+
+- Websockets - We open only 1 TCP connection and send, recieve data there. Hard to load balance for backend.
+
+![alt text](websockets.png)
+
+- Server side Events - Follows Http2, easier to Load balance, has limited data types, hard to use
+
+![alt text](ssevents.png)
+
+## Optimization & Performance
+
+    Spend 40% time here.
+
+- Optimizations
+- Security
+- A11y
+- Observability/ Tracking
+
+### Optimization
+
+- Network - Header compression ( like gzip or brotli)
+- Caching stratergies for Client (Apollo Caching, this is built in GraphQL)
+- Group multiple tracking requests in a single request so server does not have to process a lot of requests in a single go.
+- Image Optimizations - Pull compressed and specific sized images. This is one of the most imp points.
+- Bundle Splitting - Lazy load, separate out app code and analytical stuff or code form other vendors, compress html js css.
+
+![alt text](splitting.png)
+
+Rendering
+
+![alt text](rendering1.png)
+
+![alt text](rendering2.png)
+
+![alt text](rendering3.png)
+
+### A11y
+
+Aria roles is most imp here.
+
+![alt text](a11y.png)
+
+### Security
+
+Rate Limiting is done to prevent DDOS attack, so network request are send between certain intervals.
+XSS - Most imp one, Cross Side Scripting attacks - People can inject their own Javascript in our webpage, and if our webpage can communicate with server, then the server is highjacked from our client using plain JS. For this we need to make sure that html text nodes are parsed for various Js tags, like opening tags and closing tags. Or using innerText instead of innerHTML
+Reference - https://www.youtube.com/watch?v=ns1LX6mEvyM&t=11s
+
+![alt text](security.png)
