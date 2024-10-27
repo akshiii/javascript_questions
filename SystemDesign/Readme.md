@@ -43,7 +43,7 @@
   The View layer has the actual Component, it can have child Components as well.
   The child components can also communicate with our Controllers to Post new data taken from user, like comments or New Post etc..
   This is like a MVC design pattern.
-  ![alt text](image.png)
+  ![alt text](compArchitecture.png)
 
 - Discuss what Design Pattern you want to use and why.
   MVC is a good approach and its easy to organize code, and each component has its own purpose.
@@ -54,3 +54,17 @@
 - Explain how interactions will work.
 
 ## Data Model
+
+- Build out the Data types to render the content on the client. Below is the states of the Components.
+
+  ![alt text](datamodel.png)
+
+## API Model
+
+- What HTTP protocol to use and why.
+
+![alt text](http1Vshttp2.png)
+
+- Api Options
+
+![alt text](polling.png)
