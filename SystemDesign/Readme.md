@@ -38,4 +38,19 @@
 
 - Start with a simple UI design
 - Then design the Component Architecture like below is for News Feed.
+  Index.js gives data to Controller and Controller is responsible for bringing the data which is coming from API and manipulating it, parsing it and we can store it in our Data Model Store.
+  The Data Model is then calling our View Layer and passing the data.
+  The View layer has the actual Component, it can have child Components as well.
+  The child components can also communicate with our Controllers to Post new data taken from user, like comments or New Post etc..
+  This is like a MVC design pattern.
   ![alt text](image.png)
+
+- Discuss what Design Pattern you want to use and why.
+  MVC is a good approach and its easy to organize code, and each component has its own purpose.
+  Model - Data store
+  View - UI
+  Controller - Business logic
+- Explain how much the data will flow.
+- Explain how interactions will work.
+
+## Data Model
