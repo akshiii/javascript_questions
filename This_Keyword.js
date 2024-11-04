@@ -71,7 +71,7 @@ Arrow fu does not have their own this, they take the value of their enclosing le
 const obj3 = {
   a: 30,
   x: () => {
-    console.log(this); //Value of this here is obj
+    console.log(this); //Value of this here is Window
   },
 };
 
@@ -84,7 +84,6 @@ const y = () => {
     };
 This above arrow function will behave as if it was not there and only console.log(this) was replaced by it, 
 as arrow functions dont provide their own "this" binding.
-For Method y, the enclosing lexical context is Method x, and in x, the "this" point to obj4, thats why "this" inside y will also point to obj4
 */
 
 const obj4 = {
@@ -98,6 +97,7 @@ const obj4 = {
 };
 
 obj4.x();
+// For Method y, the enclosing lexical context is Method x, and in x, the "this" point to obj4, thats why "this" inside y will also point to obj4
 
 /* 
 9. this inside DOM
