@@ -21,3 +21,4 @@ const debounce = function (fn, delay) {
 };
 
 const betterFunction = debounce(getData, 300);
+//This betterFunction can be passed in onClick for any button press
