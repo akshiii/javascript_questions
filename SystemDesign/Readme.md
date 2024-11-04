@@ -111,7 +111,7 @@ Rendering
 
 ![alt text](images/rendering3.png)
 
-### A11y
+### Accessibility (A11y)
 
 1. Support different color schemas for people with color blindeness disablilities.
 2. All inputs and text areas should have aria-live.
@@ -123,8 +123,30 @@ Rendering
 
 ### Security
 
-Rate Limiting is done to prevent DDOS attack, so network request are send between certain intervals.
-XSS - Most imp one, Cross Side Scripting attacks - People can inject their own Javascript in our webpage, and if our webpage can communicate with server, then the server is highjacked from our client using plain JS. For this we need to make sure that html text nodes are parsed for various Js tags, like opening tags and closing tags. Or using innerText instead of innerHTML
-Reference - https://www.youtube.com/watch?v=ns1LX6mEvyM&t=11s
+- Rate Limiting is done to prevent DDOS attack, so network request are send between certain intervals.
+- XSS - Most imp one, Cross Side Scripting attacks - People can inject their own Javascript in our webpage, and if our webpage can communicate with server, then the server is highjacked from our client using plain JS. For this we need to make sure that html text nodes are parsed for various Js tags, like opening tags and closing tags. Or using innerText instead of innerHTML
+  Reference - https://www.youtube.com/watch?v=ns1LX6mEvyM&t=11s
+
+- Encapsulate Dom components
+  - Limit access to DOM using web components(Custom Elements, ShadowDom etc)
+  - Expose only limited customization using class API ( use # for private variables and function in custom elements)
+- Filter the data before sending it to the server
 
 ![alt text](images/security.png)
+
+### Performance
+
+#### Javascript
+
+- Try using Web Workers
+- Avoid Sync jobs
+
+#### Rendering
+
+Efficient classnames for CSS
+Try using CSS Animations instead of heavy animation files.
+Avoid reflows(Dom rebuilding or repaints)
+Reduce DOM writes
+Lazy Dom updates
+Implement Virtualization
+Use placeholders or Skeletons
