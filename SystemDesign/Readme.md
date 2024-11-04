@@ -113,7 +113,11 @@ Rendering
 
 ### A11y
 
-Aria roles is most imp here.
+1. Support different color schemas for people with color blindeness disablilities.
+2. All inputs and text areas should have aria-live.
+   Aria roles is most imp here.
+3. Images also need to have alt attributes.
+4. Hots keys(or keyboard shortcuts) like Scroll up, Scroll Down, Call for help etc..
 
 ![alt text](images/a11y.png)
 
