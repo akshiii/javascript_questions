@@ -118,6 +118,10 @@ Rendering
    Aria roles is most imp here.
 3. Images also need to have alt attributes.
 4. Hots keys(or keyboard shortcuts) like Scroll up, Scroll Down, Call for help etc..
+5. Use scalable units, fonts ( by using rem)
+6. Make sure items are tabbable
+7. Use the right HTML tags
+8. Make sure you have Focus control
 
 ![alt text](images/a11y.png)
 
