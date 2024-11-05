@@ -104,6 +104,17 @@
 
 - GraphQL - Pros is that its very modern, easy to load balance, and mainly that it loads only the data that we need.
 
+  Pros
+
+- Highly flexible, you can request only the data that you need
+- All benefits of SSE over HTTP2
+- We dont need to craete multiple api endpoints, easy to scale.
+
+  Cons
+
+- We need a client that supports subscription over SSE or implement our own
+- No HTTP caching, graphql works over POST, we need to rely over client library to cache request.
+
 ![alt text](images/graphql.png)
 
 - Websockets - We open only 1 TCP connection and send, recieve data there. Hard to load balance for backend.
@@ -126,6 +137,7 @@
 ### Optimization
 
 - Network - Header compression ( like gzip or brotli) Gzip is a compression technology for transferring data quickly over the internet.
+- We can bundle split the entire code into multiple bundles, some non-critical resources can be loaded later using link = "preconnect", bundles for old browser ( having polyfills etc).
 - Caching stratergies for Client (Apollo Caching, this is built in GraphQL)
 - Group multiple tracking requests in a single request so server does not have to process a lot of requests in a single go.
 - Image Optimizations - Pull compressed and specific sized images. This is one of the most imp points.
@@ -174,13 +186,14 @@ Rendering
 
 - Try using Web Workers
 - Avoid Sync jobs
+- Ship as less polyfills as we can
 
 #### Rendering
 
-Efficient classnames for CSS
-Try using CSS Animations instead of heavy animation files.
-Avoid reflows(Dom rebuilding or repaints)
-Reduce DOM writes
-Lazy Dom updates
-Implement Virtualization
-Use placeholders or Skeletons
+- Efficient classnames for CSS
+- Try using CSS Animations instead of heavy animation files.
+- Avoid reflows(Dom rebuilding or repaints)
+- Reduce DOM writes
+- Lazy Dom updates
+- Implement Virtualization
+- Use placeholders or Skeletons
