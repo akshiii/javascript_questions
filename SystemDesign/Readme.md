@@ -64,6 +64,35 @@
 
 - What HTTP protocol to use and why. Spend 10% time here.
 
+### Long Polling
+
+- HTTP benefits
+- Simple and managebile
+- Latency can be preety long
+- Connection timeout, specially bcz of proxies
+- Easier to Load Balance
+- Traffic overhead - TCP is connection oriented. Anything sent has to make it and has to be accounted for in the correct order too. So it takes more information to make that happen. That extra information is referred to as overhead.
+
+### Web Sockets
+
+- Duplex communication (2-way)
+- Websockets are super fast
+- Keeping a WS connection is expensive
+- HTTP2 compatible
+- WS are hard to load balance
+- Need to do a lot of stuff that is already done in HTTP2 protocol
+- Using WS can be problomatic with firewalls and proxies filtering TCP traffic
+
+### SSE ( Server side events)
+
+- HTTP2 benefits
+- We recieve only a piece of our data in text format
+- SSE events dont waste device resource. Its resource-efficient
+- SSE are easier to load balance with correct server config
+- Weird API
+- Unidirectional
+- Text data
+
 ![alt text](images/http1Vshttp2.png)
 
 ### Api Options
