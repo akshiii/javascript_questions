@@ -63,6 +63,7 @@
 ## API Model
 
 - What HTTP protocol to use and why. Spend 10% time here.
+- We have 3 options, LongPolling (RestAPI), websockets, or SSE
 
 ### Long Polling
 
@@ -124,7 +125,7 @@
 
 ### Optimization
 
-- Network - Header compression ( like gzip or brotli)
+- Network - Header compression ( like gzip or brotli) Gzip is a compression technology for transferring data quickly over the internet.
 - Caching stratergies for Client (Apollo Caching, this is built in GraphQL)
 - Group multiple tracking requests in a single request so server does not have to process a lot of requests in a single go.
 - Image Optimizations - Pull compressed and specific sized images. This is one of the most imp points.
