@@ -197,3 +197,10 @@ Rendering
 - Lazy Dom updates
 - Implement Virtualization
 - Use placeholders or Skeletons
+
+### Scalability
+
+- For medium size companies - Module separation of different pages in the website
+- scaling at backend first , horizontal scaling, using proxy server, stateless (do not save states in server, store it in redis server)
+- AWS lambda is usefull in above point as it can automatically scale horizontally, or shrink so we only pay for the cost while the code is executing.
+- For big companies- For DB's - Redis and MongoDB - we can use Distributed Database ( fauna DB, planetscaleDB ) these DB's expose ur DB's over an HTTP server and manage the internal read-write part themselves.
