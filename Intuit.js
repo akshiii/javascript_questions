@@ -1,3 +1,5 @@
+// IMP Lesson here: An async await block will only wait if it encounters anything worth waiting for, like a settimeout or fetch call etc. If await function does not have any JS which is asynchronous then it will act no wait for it.
+// If it sees a console.log then it will not wait for it.
 function resolveAfter5Seconds() {
   return new Promise((resolve) => {
     setTimeout(() => {
